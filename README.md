@@ -6,3 +6,5 @@ Displays the result sum of the numbers.
 Computes the subtraction of the numbers and displays the result.
 *Added Multiplication feature to the Calculator App.
 Computes the Multiplication of the numbers and displays the result.
+*Added Division feature to the Calculator App.
+Computes th division of the two numbers and displays the result.
