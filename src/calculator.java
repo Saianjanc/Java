@@ -10,7 +10,7 @@ public class calculator {
         var1=sc.nextDouble();
         System.out.println("Enter 2nd number:");
         var2=sc.nextDouble();
-        System.out.println("Enter a choice\n 1:For Addition\n 2:For Subtraction");
+        System.out.println("Enter a choice\n 1:For Addition\n 2:For Subtraction\n 3:For Multiplication");
         input=sc.nextInt();
         switch (input){
             case 1:
@@ -20,6 +20,10 @@ public class calculator {
             case 2:
                 var3=var1-var2;
                 System.out.println("Subtraction of the two numbers is "+var3);
+                break;
+            case 3:
+                var3=var1*var2;
+                System.out.println("Multiplication of the two numbers is "+var3);
                 break;
             default:
                 System.out.println("Invalid Input!");
