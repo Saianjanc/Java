@@ -10,24 +10,12 @@ public class calculator {
         var1=sc.nextDouble();
         System.out.println("Enter 2nd number:");
         var2=sc.nextDouble();
-        System.out.println("Enter a choice\n 1:For Addition\n 2:For Subtraction\n 3:For Multiplication\n 4:For Division");
+        System.out.println("Enter a choice\n 1:For Addition");
         input=sc.nextInt();
         switch (input){
             case 1:
                 var3=var1+var2;
                 System.out.println("Addition of the two number is "+var3);
-                break;
-            case 2:
-                var3=var1-var2;
-                System.out.println("Subtraction of the two numbers is "+var3);
-                break;
-            case 3:
-                var3=var1*var2;
-                System.out.println("Multiplication of the two numbers is "+var3);
-                break;
-            case 4:
-                var3=var1/var2;
-                System.out.println("Division of the two numbers is "+var3);
                 break;
             default:
                 System.out.println("Invalid Input!");
