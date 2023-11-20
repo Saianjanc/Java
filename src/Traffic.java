@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Car{
     String licence,color,brand;
     Car(String s1,String s2,String s3){
@@ -17,7 +19,10 @@ class Car{
 }
 public class Traffic {
     public static void main(String[] args) {
-        Car[] cars = new Car[10];
+        Scanner sc = new Scanner(System.in);
+        int option,count=9;
+        String plateno,ncolor,nbrand;
+        Car[] cars = new Car[20];
         Car c1 = new Car("Ka051002","Black","Maruti Suzuki");
         Car c2 = new Car("Ka023034","Blue","Hyundai");
         Car c3 = new Car("Ka054223","Black","Ford");
@@ -38,8 +43,43 @@ public class Traffic {
         cars[7] = c8;
         cars[8] = c9;
         cars[9] = c10;
-        for (int i=0;i< cars.length;i++){
-            System.out.println(cars[i]);
-        }
+        do{
+            System.out.println("Please Select an Option:\n 1:Add a new car.\n 2:Display the list of cars.\n 3:Find a car by Licence Plate.\n 4:To Exit!");
+            option = sc.nextInt();
+            switch (option){
+                case 1:
+                        System.out.println("Enter the Licence Plate Number:");
+                        plateno = sc.next();
+                        System.out.println("Enter the Car Color:");
+                        ncolor = sc.next();
+                        System.out.println("Enter the Car Brand:");
+                        nbrand = sc.next();
+                        count++;
+                        cars[count] = new Car(plateno,ncolor,nbrand);
+                        break;
+                case 2:
+                        for (int i=0;i<count;i++){
+                            System.out.println(cars[i]);
+                        }
+                        break;
+                case 3:
+                        System.out.println("Enter Licence Plate Number to find the car:");
+                        plateno = sc.next();
+                        for (int i=0;i<count;i++){
+                            if (cars[i].licence.equals(plateno)) {
+                                    System.out.println(cars[i]);
+                                    break;
+                                }
+                            }
+                        System.out.println("Not Found!");
+                        break;
+                case 4:
+                        System.out.println("Bye!!");
+                        break;
+                default:
+                        System.out.println("Invalid Input Please Enter Correct Input!");
+                        break;
+            }
+        }while (option!=4);
     }
 }
